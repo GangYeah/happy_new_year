@@ -11,18 +11,31 @@
 }
 
 .scroll-image {
-    width: 50%;
-    animation: float 2s infinite ease-in-out;
+  width: 50%;
+  animation: float 2s infinite ease-in-out;
 }
 
 .image-writing-example {
-    width: 30%;
+  width: 50%;
+}
+* {
+  font-family: "Yanone Kaffeesatz", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.slides section p {
+  margin: 2vw;
+}
+
+.slides section {
+  font-size: 2.3em; /* Увеличение общего размера текста на слайдах */
 }
 
 .button {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #4CAF50; /* Зеленый фон */
+  background-color: #5eb7b7; /* Зеленый фон */
   color: white !important; /* Белый текст */
   font-size: 52px;
   font-weight: bold;
@@ -33,8 +46,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 320px;
   width: 300px;
+  margin-top: 20px;
 }
 
 .button:hover {
@@ -54,4 +68,13 @@
   border-radius: 10px; /* Скругление углов */
   justify-content: center; /* Центрируем содержимое по горизонтали */
   align-items: center;
+}
+
+.title {
+  font-size: 1.5em !important;
+  margin-bottom: 30px;
+}
+
+.desc {
+  font-size: .7em !important;
 }

@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Hello World</title>
 
+        <link rel="stylesheet" href="./style.css">
 		<link rel="stylesheet" href="./dist/reveal.css">
 		<link rel="stylesheet" href="./dist/theme/white.css" id="theme">
 		<style type="text/css" media="screen">
@@ -19,71 +20,94 @@
 	</head>
 
 	<body>
-
 		<div class="reveal">
-
 			<div class="slides">
-
+                <section>
+                    <p>Для управления листай вниз</p>
+                    <img class="scroll-image" src="./assets/pngwing.com.png">
+				</section>
 				<section>
-					<h3>Default</h3>
+                    Хеллоу!
+					<p class="fragment"> Если ты это читаешь, значит первая часть подарка уже у тебя</p>
+                    <p class="fragment"> но это ещё не всё)</p>
 				</section>
-
 				<section>
-					<h3>Default</h3>
+					<p>По работе мне не приходится часто держать ручку✍️</p>
+                    <p class="fragment">Неудивительно, что мои навыки каллиграфии, мягко говоря, оставляют желать лучшего.
+                        <img class="image-writing-example" src="./assets/dTc54k.jpg">
+                    </p>
 				</section>
 
-				<section data-transition="zoom">
-					<h3>data-transition: zoom</h3>
+				<section >
+					<p>Поэтому вместо письма я решил оформить поздравление в более подходящем для меня формате</p>
+                    <p>Надеюсь ты не против😉</p>
 				</section>
 
-				<section data-transition="zoom-in fade-out">
-					<h3>data-transition: zoom-in fade-out</h3>
+                <section>
+                    <p>Чтобы я хотел пожелать🤔</p>
+                </section>
+
+                <section>
+                    Здоровья, щастья
+                    Ладно, а на самом деле
+                </section>
+
+                <section>
+					<p>Меньше работы – больше жизни!</p>
+                    <p>Пусть этот год будет временем, когда ты по-настоящему будешь заботиться о себе. Находи время для отдыха, путешествий и людей, которые делают тебя счастливыми.</p>
 				</section>
 
+                <section>
+                    Тепла и любви!
+                    Пусть в твоей жизни будет много тепла, а любовь окружает тебя всегда и везде.
+                </section>
+
+                <section>
+                    Тонких моментов счастья!
+                    Пусть каждый день будет полон маленьких, но очень значимых моментов счастья, которые согревают душу.
+                </section>
+
+                <section>
+                    Поменьше переживать!
+                    Пусть все волнения останутся позади, а впереди будут только светлые и счастливые моменты, полные радости и покоя.
+                </section>
+
+                <section>
+                    Ближе к мечтам!
+                    Верь в свои мечты и иди к ним! Пусть этот год приблизит тебя к счастью, которого ты заслуживаешь.
+                </section>
+                    
 				<section>
-					<h3>Default</h3>
-				</section>
+					<p>И еще</p>
+                    <p>Я хочу тебе сказать большое спасибо! ты нереально крутой человек, и я очень ценю наше общение. Ты уже сделала конец 2024 год незабываемым для меня, и я хочу верить, что это не финал, а лишь начало. Надеюсь, что мне удастся раскрыться перед тобой в следющем году.</p>
+                    <p class="fragment">И это поздравление — первый шаг в этом пути!</p>
+                </section>
 
-				<section data-transition="convex">
-					<h3>data-transition: convex</h3>
-				</section>
+                <section>
+                    <p>Даша, с наступающим 2025 годом тебя 🎉🥳</p>
+                </section>
 
-				<section data-transition="convex-in concave-out">
-					<h3>data-transition: convex-in concave-out</h3>
-				</section>
-
-				<section>
-					<section data-transition="zoom">
-						<h3>Default</h3>
-					</section>
-					<section data-transition="concave">
-						<h3>data-transition: concave</h3>
-					</section>
-					<section data-transition="convex-in fade-out">
-						<h3>data-transition: convex-in fade-out</h3>
-					</section>
-					<section>
-						<h3>Default</h3>
-					</section>
-				</section>
-
-				<section data-transition="none">
-					<h3>data-transition: none</h3>
-				</section>
-
-				<section>
-					<h3>Default</h3>
-				</section>
-
+                <section>
+                    <p>Спасибо, что уделила время и прочитала всё это! Вручаю тебе за это еще один мини-подарок! 🎁</p>
+                    <a class="button" href="https://ga.gift/ru/d2c0a2d944d247fb9bcc0ce019569339">Кликай <br>сюда</a>
+                </section>
 			</div>
-
 		</div>
 
 		<script src="./dist/reveal.js"></script>
+        <script>
+            function showGift() {
+                const gift = document.querySelector('.gift');
+                gift.style.display = 'flex';
+            }
+        </script>
 		<script>
 			Reveal.initialize({
+                view: 'scroll',
+                scrollProgress: true,
 				center: true,
 				history: true,
+                scrollSnap: 'mandatory'
 
 				// transition: 'slide',
 				// transitionSpeed: 'slow',

@@ -1,0 +1,57 @@
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-image {
+    width: 50%;
+    animation: float 2s infinite ease-in-out;
+}
+
+.image-writing-example {
+    width: 30%;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #4CAF50; /* Зеленый фон */
+  color: white !important; /* Белый текст */
+  font-size: 52px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%; /* Круглая форма */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+}
+
+.button:hover {
+  background-color: #45a049; /* Цвет при наведении */
+}
+
+.gift {
+  display: none;
+  position: fixed; /* Фиксированное положение */
+  top: 50%; /* Располагаем контейнер по вертикали на середине */
+  left: 50%; /* Располагаем контейнер по горизонтали на середине */
+  transform: translate(-50%, -50%); /* Подгоняем контейнер точно по центру */
+  width: 80%; /* Устанавливаем ширину контейнера, можно изменить */
+  max-width: 600px; /* Ограничиваем максимальную ширину */
+  height: 400px; /* Устанавливаем высоту контейнера, можно изменить */
+  background-color: #f4f4f4; /* Цвет фона контейнера */
+  border-radius: 10px; /* Скругление углов */
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  align-items: center;
+}

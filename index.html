@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Happy New Year</title>
+    <title>Презентация для Даши</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,23 +31,27 @@
           <p>Для управления листай вниз</p>
           <img class="scroll-image" src="./assets/pngwing.com.png" />
         </section>
+
         <section
           style="color: #fff"
           data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"
         >
-          Хеллоу!
-          <p class="fragment">
-            Если ты это читаешь, значит первая часть подарка уже у тебя
-          </p>
-          <p class="fragment">но это ещё не всё)</p>
+          <p class="fragment">Ну, привет Даша</p>
+          <p class="fragment">Top-master</p>
         </section>
 
         <section data-background-color="#a8e6cf" style="color: #333">
-          <p>По работе мне не приходится часто держать ручку✍️</p>
           <p class="fragment">
-            Неудивительно, что мои навыки каллиграфии, мягко говоря, оставляют
-            желать лучшего.<br />
-            <img class="image-writing-example" src="./assets/dTc54k.jpg" />
+            Для начала, я хочу тебе сказать огромное спасибо!
+          </p>
+          <p class="fragment">
+            Честно, я не знал как показать насколько мне важна ты и общение с
+            тобой.
+          </p>
+          <p class="fragment">но я решил сделать попытку</p>
+          <p class="fragment">
+            Да уж, я ничего не умею, поэтому, как обычно, все перевел в цифры,
+            лол))
           </p>
         </section>
 
@@ -55,109 +59,199 @@
           style="color: #fff"
           data-background-gradient="linear-gradient(to right, #ff7e5f, #feb47b)"
         >
-          <p>
-            Поэтому вместо письма я решил оформить поздравление в более
-            подходящем для меня формате
-          </p>
-          <p class="fragment">Надеюсь ты не против😉</p>
+          <p class="fragment">Знала ли ты, что?</p>
         </section>
 
         <section data-background-color="#ff8b94" style="color: #fff">
-          <p>Чтобы я хотел пожелать🤔</p>
+          <p class="fragment">
+            Мы написали друг другу уже 9008 сообщений, ты в частности 3640
+          </p>
         </section>
 
         <section data-background-color="#ffaaa5" style="color: #fff">
-          Здоровья, щастя
-          <p class="fragment">Ладно, а на самом деле</p>
+          <p class="fragment">Видно, кто из нас писатель</p>
+          <p class="fragment">
+            но при этом у тебя длиннее сообщения 26 символов, против моих 22
+          </p>
+        </section>
+
+        <section
+          style="color: #fff"
+          data-background-gradient="linear-gradient(to right, #ff7e5f, #feb47b)"
+        >
+          <p class="fragment">
+            Ты отправила <br /><b style="font-size: 10rem">100</b>
+            <br />голосовых сообщений!
+          </p>
+          <p class="fragment">
+            На почти час времени <br />точнее
+            <b style="font-size: 10rem">59 минут</b><br />
+          </p>
+          <p class="fragment">это целый подкаст)</p>
+        </section>
+
+        <section data-background-color="#ff8b94" style="color: #fff">
+          <p class="fragment">Кто из нас больше спрашивает?</p>
+          <canvas id="questionsChart" class="fragment"></canvas>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+        <!-- Подключаем плагин для отображения данных -->
+
+        <script>
+          // Создаем диаграмму
+          const ctx = document
+            .getElementById("questionsChart")
+            .getContext("2d");
+          const questionsChart = new Chart(ctx, {
+            type: "pie", // Используем круговую диаграмму
+            data: {
+              labels: ["Я", "Ты"], // Лейблы для секторов
+              datasets: [
+                {
+                  label: "Процент вопросов",
+                  data: [69, 31], // Процент вопросов, которые задаем мы
+                  backgroundColor: ["#ff4e50", "#f1d5d8"], // Цвета для секторов
+                  borderColor: ["#fff", "#fff"], // Цвет границы
+                  borderWidth: 2, // Толщина границ
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: {
+                  display: false, // Отключаем легенду
+                },
+                tooltip: {
+                  backgroundColor: "rgba(0,0,0,0.7)",
+                  bodyFont: {
+                    size: 34,
+                  },
+                },
+                // Настройка плагина для отображения данных на диаграмме
+                datalabels: {
+                  color: "#fff", // Цвет текста
+                  font: {
+                    weight: "bold",
+                    size: 40,
+                  },
+                  formatter: (value) => `${value}%`, // Форматирование данных с добавлением знака процента
+                  anchor: "center", // Центрирование текста
+                  align: "center", // Центрирование текста в секторах
+                  clamp: true, // Обрезать текст, если он не помещается
+                },
+              },
+            },
+          });
+        </script>
+
+        <section data-background-color="#ffaaa5" style="color: #fff">
+          <p class="fragment">
+            А вот где ты точно выигрываешь — это в реакциях!
+          </p>
+          <p class="fragment">Мы отправили 319 реакций, из которых твои 226!</p>
+          <p class="fragment">
+            А это топ реакций: <br />
+            <div
+              style="
+                display: flex;
+                margin: 0 auto;
+                justify-content: center;
+                gap: 30px;
+                font-size: 10rem;
+                margin-top: 20px;
+              "
+            >
+              <div>❤</div>
+              <div>😁</div>
+              <div>😱</div>
+              <div>👍</div>
+            </div>
+          </p>
+        </section>
+
+        <section data-background-color="#ff8b94" style="color: #fff">
+          <p class="fragment">А кто из нас чаще ошибается в словах?</p>
+          <p class="fragment">Ну тут дмуаю очвидно)0)</p>
+          <p class="fragment">
+          <div class="message-container">
+            <!-- Сообщение 1 -->
+            <div class="message">
+              <div class="avatar">
+                <img src="./assets/Untitled.jpg" alt="Darya" />
+              </div>
+              <div class="message-body">
+            <p style="text-align: left">Darya</p>
+                <div class="message-text">
+                    0.2 опечатки на сообщение
+                 </div>
+              </div>
+              
+            </div>
+            <!-- Сообщение 2 -->
+            <div class="message" style="justify-content: right;">
+              
+              <div class="message-body">
+                <p style="text-align: right">Сергей Захаров</p>
+                <div class="message-text">
+                    0.55 опечатки на сообщение
+                 </div>
+              </div>
+              <div class="avatar">
+                <img src="./assets/Untitled1.jpg" alt="Sergey" />
+              </div>
+            </div>
+          </div>
+        </p>
+        </section>
+
+        <style>
+          
+        </style>
+
+        <section data-background-color="#ff8b94" style="color: #fff">
+            <p class="fragment">
+            А вот слова, которые ты чаще всего использовала <br>
+            <img src="./assets/5VJMfO.jpg">
+            </p>
         </section>
 
         <section
           style="color: #333"
           data-background-gradient="linear-gradient(to bottom, #a8edea, #fed6e3)"
         >
-          <p class="title">Меньше работы – больше жизни!</p>
-          <p class="desc">
-            Пусть этот год будет временем, когда ты по-настоящему будешь
-            заботиться о себе. <br> Находи время для отдыха, путешествий и людей,
-            которые делают тебя счастливыми.
-          </p>
-        </section>
-
-        <section data-background-color="#fff9c4" style="color: #333">
-          <p class="title">Тепла и любви!</p>
-          <p></p>
-          <p class="desc">
-            Пусть в твоей жизни будет много тепла, а любовь окружает тебя всегда
-            и везде.
-          </p>
-        </section>
-
-        <section data-background-color="#ffecd2" style="color: #333">
-          <p class="title">Тонких моментов счастья!</p>
-          <p class="desc">
-            Пусть каждый день будет полон маленьких, но очень значимых моментов
-            счастья, которые согревают душу.
-          </p>
-        </section>
-
-        <section
-          style="color: #fff"
-          data-background-gradient="linear-gradient(to top, #43cea2, #185a9d)"
-        >
-          <p class="title">Поменьше переживать!</p>
-          <p class="desc">
-            Пусть все волнения останутся позади, а впереди будут только светлые
-            и счастливые моменты, полные радости и покоя.
-          </p>
-        </section>
-
-        <section data-background-color="#ffb3c1" style="color: #fff">
-          <p class="title">Ближе к мечтам!</p>
-          <p class="desc">
-            Верь в свои мечты и иди к ним! <br> Пусть этот год приблизит тебя к
-            счастью, которого ты заслуживаешь.
-          </p>
-        </section>
-
-        <section data-background-gradient="linear-gradient(to bottom, #01023a, #02426e)"  style="color: #fff">
-          <p>И еще</p>
-          <p class="fragment" style="font-size: .6em !important;">
-            Я хочу тебе сказать большое спасибо!<br /> Ты нереально крутой человек, и
-            я очень ценю наше общение.<br />
-            Хочу верить, что это не финал, а лишь начало. <br />Надеюсь, что мне
-            удастся раскрыться перед тобой в следующем году.
+          <p class="fragment">
+            Все это, конечно, просто цифры. Главное — что за ними стоит!
           </p>
           <p class="fragment">
-            И это поздравление — небольшой шаг в этом пути!
+            Мне бы хотелось, чтобы наше общение вышло за пределы чатов и
+            переросло в реальную жизнь🙏
           </p>
         </section>
-
-        <section data-background-gradient="linear-gradient(to bottom, #01023a, #02426e)" style="color: #fff">
-          <p>Даша, с наступающим 2025 годом тебя 🎉🥳</p>
-          <img style="width: 40%;" src="./assets/ezgif-2-8ab6574245.gif">
-        </section>
-
-        <section data-background-color="#3e8989" style="color: #fff">
-          <p>
-            Спасибо, что уделила время и прочитала всё это! <br>И за это 
-            от меня еще один мини-подарок! 🎁
+        <section
+          style="color: #333"
+          data-background-gradient="linear-gradient(to bottom, #a8edea, #fed6e3)"
+        >
+          <p class="fragment">
+            Вот так я не хитро перевожу к своему любимому вопросу:
           </p>
-          <a
-            class="button"
-            href="https://ga.gift/ru/d2c0a2d944d247fb9bcc0ce019569339"
-            >Кликай <br />сюда</a
-          >
+          <p class="fragment">
+            <b>
+            когда
+            встретимся?)
+        </b>
+            </p>
+          <p class="fragment">
+            Ты знаешь где это отписать, но если что вот ссылка😉
+            <a href="https://t.me/yvnggun">@yvnggun</a>
+          </p>
         </section>
       </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
-    <script>
-      function showGift() {
-        const gift = document.querySelector(".gift");
-        gift.style.display = "flex";
-      }
-    </script>
     <script>
       Reveal.initialize({
         view: "scroll",
@@ -165,10 +259,6 @@
         center: true,
         history: true,
         scrollSnap: "mandatory",
-
-        // transition: 'slide',
-        // transitionSpeed: 'slow',
-        // backgroundTransition: 'slide'
       });
     </script>
   </body>

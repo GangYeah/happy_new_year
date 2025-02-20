@@ -21,10 +21,174 @@
       .slides section.has-light-background h3 {
         color: #222;
       }
+
+      /* Стили для разных фонов */
+      [data-background-gradient*="#ff9a9e"] {
+        color: rgba(0,0,0,0.8) !important;
+      }
+      [data-background-gradient*="#ff9a9e"] .stat-number,
+      [data-background-gradient*="#ff9a9e"] .number-highlight {
+        color: #1a1a1a;
+        text-shadow: 1px 1px 0 rgba(255,255,255,0.4);
+      }
+
+      [data-background-gradient*="#a18cd1"] {
+        color: #fff !important;
+      }
+      [data-background-gradient*="#a18cd1"] .stat-number,
+      [data-background-gradient*="#a18cd1"] .number-highlight {
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+
+      [data-background-gradient*="#fccb90"] {
+        color: rgba(0,0,0,0.9) !important;
+      }
+      [data-background-gradient*="#fccb90"] .stat-number,
+      [data-background-gradient*="#fccb90"] .number-highlight {
+        color: #1a1a1a;
+        text-shadow: 1px 1px 0 rgba(255,255,255,0.4);
+      }
+
+      [data-background-gradient*="#88d3ce"] {
+        color: #fff !important;
+      }
+      [data-background-gradient*="#88d3ce"] .stat-number,
+      [data-background-gradient*="#88d3ce"] .number-highlight {
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+
+      /* Базовые стили для всего текста */
+      .slides section p {
+        letter-spacing: 0.5px;
+        line-height: 1.4;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      }
+
+      /* Стили для цифр */
+      .number-highlight {
+        font-weight: bold;
+        background: linear-gradient(45deg, #fff 10%, rgba(255,255,255,0.8) 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      }
+
+      /* Стили для эмодзи */
+      .emoji {
+        display: inline-block;
+        transform: scale(1.2);
+        margin: 0 3px;
+      }
+
+      /* Стили для важного текста */
+      .highlight-text {
+        font-weight: 500;
+        background: linear-gradient(120deg, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
+        -webkit-background-clip: text;
+        color: transparent;
+        padding: 0 5px;
+        text-shadow: none;
+      }
+
+      /* Стили для подзаголовков */
+      .sub-text {
+        font-size: 0.9em;
+        opacity: 0.9;
+        font-style: italic;
+      }
+
+      /* Стили для списков и статистики */
+      .stat-number {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      }
+
+      /* Анимация для текста */
+      @keyframes shimmer {
+        0% {
+          background-position: -100% 0;
+        }
+        100% {
+          background-position: 100% 0;
+        }
+      }
+
+      .shimmer-text {
+        background: linear-gradient(90deg, 
+          rgba(0,0,0,0.6) 0%,
+          rgba(0,0,0,0.9) 50%,
+          rgba(0,0,0,0.6) 100%);
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: shimmer 3s infinite;
+        font-weight: bold;
+        text-shadow: none;
+      }
+
+      /* Анимации для текста */
+      .fragment.fade-up.visible {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      /* Пульсация для эмодзи */
+      .emoji-pulse {
+        display: inline-block;
+        animation: pulse 2s infinite;
+      }
+
+      .big-number:hover {
+        transform: scale(1.05);
+      }
+
+      /* Анимации */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 40px, 0);
+        }
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Стили для interesting fact */
+      .fact-label {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px) rotate(-2deg);
+        }
+        50% {
+          transform: translateY(-10px) rotate(-2deg);
+        }
+        100% {
+          transform: translateY(0px) rotate(-2deg);
+        }
+      }
     </style>
   </head>
 
   <body>
+    <audio id="bgMusic" src="assets/Lola Young - Messy.mp3" preload="auto" playsinline></audio>
     <div class="reveal">
       <div class="slides">
         <section>
@@ -33,126 +197,145 @@
         </section>
 
         <section
-          style="color: #fff"
+          
           data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"
         >
-          <p class="fragment">Ну,здравствуйте Дарья</p>
-          <p class="fragment">Top-master🔝🔝🔝</p>
+          <p class="fragment">Даша, привет!</p>
         </section>
 
-        <section data-background-color="#a8e6cf" style="color: #333">
+        <section data-background-color="#a8e6cf" >
           <p class="fragment">
-            Когда общаешься с человеком, не всегда осознаешь, насколько он важен для тебя. 
+            Тебе этот формат уже знаком)
           </p>
-          <p class="fragment">А что, если представить это в цифрах?</p>
+          <p class="fragment">Да я опять со своими цифрами!</p>
           <p class="fragment" style="font-size: 4rem;">
-           (сорри, да это моя профессиональная деформация все к этому сводить)
+           Но с тех пор немало поменялось
           </p>
+        </section>
+        <section>
+          <p class="fragment">А еще оказывается здесь можно включать фоновую музыку
+            <a id="startButton" style="background: rgba(255,255,255,0.7); padding: 10px; border-radius: 5px; cursor: pointer; display: none;">
+              🎵 Тыкни сюда
+            </a>
+          </p>
+        </section>
+
+        <section data-background-gradient="linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)" >
+          <p class="fragment">
+            Ну что за это время мы написали друг другу уже
+          </p>
+          <p class="fragment shimmer-text" style="font-size: 10rem;">
+            14520
+          </p>
+          <p class="fragment sub-text">
+            сообщений
+          </p>
+          <p class="fragment">
+            а ты, в частности<br> <span class="number-highlight">6520</span>
+            <br>
+            с прошлго раза +60%
+          </p>
+        </section>
+
+        <section data-background-gradient="linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)" >
+          <div style="
+            position: absolute;
+            top: -300px;
+            left: 20px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+backdrop-filter: blur(10px);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: .9em;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+            transform: rotate(-2deg);
+            animation: float 3s ease-in-out infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            ">
+            <span class="emoji-pulse">✨</span> Рубрика: <span class="gradient-text">interesting fact</span> <span class="emoji-pulse">✨</span>
+          </div>
+          <p class="fragment">Благодаря тебе <br> я наконец нашел повод<br> чуть погрузиться в морепродукты <br>и узнать вкус мидий)</p>
+        </section>
+
+        <section data-background-gradient="linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)" >
+          <p class="fragment">Наши сообщения стали чуть длинее</p>
+          <p class="fragment">
+            в среднем 28 символов🤔
+          </p>
+        </section>
+
+        <section data-background-gradient="linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)" >
+          <div style="
+            position: absolute;
+            top: -400px;
+            left: 20px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+backdrop-filter: blur(10px);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: .9em;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+            transform: rotate(-2deg);
+            animation: float 3s ease-in-out infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            ">
+            <span class="emoji-pulse">✨</span> Рубрика: <span class="gradient-text">interesting fact</span> <span class="emoji-pulse">✨</span>
+          </div>
+          <p class="fragment">Благодаря тебе узнал, <br>что на нефтяных месторождениях есть технологические режимы</p>
         </section>
 
         <section
-          style="color: #fff"
-          data-background-gradient="linear-gradient(to right, #ff7e5f, #feb47b)"
-        >
-          <p class="fragment">Знала ли ты, что?</p>
-        </section>
-
-        <section data-background-color="#ff8b94" style="color: #fff">
-          <p class="fragment">
-            Мы написали друг другу уже
-          </p>
-          <p class="fragment" style="font-size: 10rem;">
-            9008 сообщений
-          </p>
-          <p class="fragment">
-            а ты, в частности<br> 3640
-          </p>
-        </section>
-
-        <section data-background-color="#ffaaa5" style="color: #fff">
-          <p class="fragment">Сразу видно кто любит пулять несколькми сообщениями)</p>
-          <p class="fragment">
-            При этом твои сообщения длиннее🤔<br>26 символов в среднем, <br>против моих 22
-          </p>
-        </section>
-
-        <section
-          style="color: #fff"
+          
           data-background-gradient="linear-gradient(to right, #ff7e5f, #feb47b)"
         >
           <p class="fragment">
-            Ты отправила <br /><b style="font-size: 10rem">100</b>
+            Ты отправила <br /><b style="font-size: 10rem">145</b>
             <br />голосовых сообщений!
           </p>
           <p class="fragment">
-            На почти час времени <br />точнее
-            <b style="font-size: 10rem">59 минут</b><br />
+            <b style="font-size: 10rem"> на 96 минут</b><br />
           </p>
-          <p class="fragment">это целый подкаст)</p>
         </section>
 
-        <section data-background-color="#ff8b94" style="color: #fff">
-          <p class="fragment">Кто из нас больше спрашивает?</p>
-          <canvas id="questionsChart" class="fragment"></canvas>
+        <section data-background-gradient="linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)" >
+          <div style="
+            position: absolute;
+            top: -200px;
+            left: 20px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+backdrop-filter: blur(10px);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: .9em;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+            transform: rotate(-2deg);
+            animation: float 3s ease-in-out infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            ">
+            <span class="emoji-pulse">✨</span> Рубрика: <span class="gradient-text">interesting fact</span> <span class="emoji-pulse">✨</span>
+          </div>
+          <p class="fragment">Я впервые вживую увидел девушку, кайфущей с Кендрика<br>
+            <img src="./assets/giphy.gif">
+          </p>
         </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
-        <!-- Подключаем плагин для отображения данных -->
-
-        <script>
-          // Создаем диаграмму
-          const ctx = document
-            .getElementById("questionsChart")
-            .getContext("2d");
-          const questionsChart = new Chart(ctx, {
-            type: "pie", // Используем круговую диаграмму
-            data: {
-              labels: ["Я", "Ты"], // Лейблы для секторов
-              datasets: [
-                {
-                  label: "Процент вопросов",
-                  data: [69, 31], // Процент вопросов, которые задаем мы
-                  backgroundColor: ["#ff4e50", "#f1d5d8"], // Цвета для секторов
-                  borderColor: ["#fff", "#fff"], // Цвет границы
-                  borderWidth: 2, // Толщина границ
-                },
-              ],
-            },
-            options: {
-              responsive: true,
-              plugins: {
-                legend: {
-                  display: false, // Отключаем легенду
-                },
-                tooltip: {
-                  backgroundColor: "rgba(0,0,0,0.7)",
-                  bodyFont: {
-                    size: 34,
-                  },
-                },
-                // Настройка плагина для отображения данных на диаграмме
-                datalabels: {
-                  color: "#fff", // Цвет текста
-                  font: {
-                    weight: "bold",
-                    size: 40,
-                  },
-                  formatter: (value) => `${value}%`, // Форматирование данных с добавлением знака процента
-                  anchor: "center", // Центрирование текста
-                  align: "center", // Центрирование текста в секторах
-                  clamp: true, // Обрезать текст, если он не помещается
-                },
-              },
-            },
-          });
-        </script>
-
-        <section data-background-color="#ffaaa5" style="color: #fff">
-          <p class="fragment">
+        <section data-background-gradient="linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)" >
+          <p class="fragment highlight-text">
             А вот где ты точно выигрываешь — это в реакциях!
           </p>
-          <p class="fragment">Мы отправили 319 реакций, из которых твои 226!</p>
+          <p class="fragment">Мы отправили <span class="stat-number">471</span> реакций, из которых твои <span class="stat-number">226</span>!</p>
           <p class="fragment">
             А это топ реакций: <br />
             <div
@@ -165,88 +348,76 @@
                 margin-top: 20px;
               "
             >
-              <div>❤</div>
-              <div>😁</div>
-              <div>😱</div>
-              <div>👍</div>
+              <div class="emoji">❤</div>
+              <div class="emoji">😁</div>
+              <div class="emoji">😱</div>
+              <div class="emoji">👍</div>
             </div>
           </p>
         </section>
 
-        <section data-background-color="#ff8b94" style="color: #fff">
-          <p class="fragment">А кто из нас чаще ошибается в словах?</p>
-          <p class="fragment">Ну тут дмуаю очвидно)0)</p>
-          <p class="fragment">
-          <div class="message-container">
-            <!-- Сообщение 1 -->
-            <div class="message">
-              <div class="avatar">
-                <img src="./assets/Untitled.jpg" alt="Darya" />
-              </div>
-              <div class="message-body">
-            <p style="text-align: left">Darya</p>
-                <div class="message-text">
-                    0.2 опечатки на сообщение
-                 </div>
-              </div>
-              
-            </div>
-            <!-- Сообщение 2 -->
-            <div class="message" style="justify-content: right;">
-              
-              <div class="message-body">
-                <p style="text-align: right">Сергей Захаров</p>
-                <div class="message-text">
-                    0.55 опечатки на сообщение
-                 </div>
-              </div>
-              <div class="avatar">
-                <img src="./assets/Untitled1.jpg" alt="Sergey" />
-              </div>
-            </div>
+        <section data-background-gradient="linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)" >
+          <div style="
+            position: absolute;
+            top: -200px;
+            left: 20px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+backdrop-filter: blur(10px);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: .9em;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+            transform: rotate(-2deg);
+            animation: float 3s ease-in-out infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            ">
+            <span class="emoji-pulse">✨</span> Рубрика: <span class="gradient-text">interesting fact</span> <span class="emoji-pulse">✨</span>
           </div>
-        </p>
+          <p class="fragment">Кстати благодаря тебе я в первый раз увидел как тг можно ставить несколько реакций на одно сообщение
+            <img style="width: 40%;" src="./assets/memes-pavlov-durov.gif">
+          </p>
         </section>
 
-        <style>
-          
-        </style>
-
-        <section data-background-color="#ff8b94" style="color: #fff">
+        <section data-background-gradient="linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)" >
             <p class="fragment">
             А вот слова, которые ты чаще всего использовала <br>
             <img src="./assets/5VJMfO.jpg">
             </p>
         </section>
-
         <section
-          style="color: #333"
-          data-background-gradient="linear-gradient(to bottom, #a8edea, #fed6e3)"
+          
+          data-background-gradient="linear-gradient(to bottom, #88d3ce, #6e45e2)"
         >
-          <p class="fragment">
-            Все это, конечно, просто цифры. Главное — что за ними стоит!
-          </p>
-          <p class="fragment">
-            Мне бы хотелось, чтобы наше общение вышло за пределы чатов🙏
-          </p>
-          <p class="fragment">
-            Вот так я не хитро перевожу к своему любимому вопросу:
-          </p>
-          <p class="fragment">
-            <b>
-            когда
-            встретимся?)
-        </b>
-            </p>
+            <div style="
+            position: absolute;
+            top: -200px;
+            left: 20px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: .9em;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(79,172,254,0.3);
+            transform: rotate(-2deg);
+            animation: float 3s ease-in-out infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            ">
+            <span class="emoji-pulse">✨</span> Рубрика: <span class="gradient-text">interesting fact</span> <span class="emoji-pulse">✨</span>
+          </div>
+            <p class="fragment">Благодаря тебе чуть-чуть погрузился в бьюти-сферу Тюмени,</p>
+            <p class="fragment">и теперь даже немного представляю непростую ситуацию с оплатой труда даже для топов🥲</p>
         </section>
-        <section
-          style="color: #333"
-          data-background-gradient="linear-gradient(to bottom, #a8edea, #fed6e3)"
-        >
-         <p class="fragment">Надеюсь, офлайн-часть подарка принесла тебе радость!</p>
+        <section>
+          <p class="fragment">Буду в этот раз лаконичен, и просто скажу</p>
           <p class="fragment">
-            Жду здесь фидбек😉
-            <a href="https://t.me/yvnggun">@yvnggun</a>
+            Спасибо❤️
           </p>
         </section>
       </div>
@@ -261,6 +432,41 @@
         history: true,
         scrollSnap: "mandatory",
       });
+
+      // Setup music player with iOS compatibility
+      document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('bgMusic');
+        const startButton = document.getElementById('startButton');
+        audio.volume = 0.3;
+
+        // Check if it's iOS
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        
+        if (isIOS) {
+          startButton.style.display = 'block';
+          startButton.addEventListener('click', function() {
+            audio.play();
+            startButton.style.display = 'none';
+          });
+        } else {
+          // On non-iOS devices, try to play automatically
+          audio.play().catch(function(error) {
+            // If autoplay fails, show the button
+            startButton.style.display = 'block';
+            startButton.addEventListener('click', function() {
+              audio.play();
+              startButton.style.display = 'none';
+            });
+          });
+        }
+
+        // Handle audio ending
+        audio.addEventListener('ended', function() {
+          audio.currentTime = 0;
+          audio.play();
+        });
+      });
     </script>
   </body>
+        
 </html>
